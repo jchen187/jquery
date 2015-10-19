@@ -22,11 +22,43 @@
         var answer = prompt("Hi. Name Please");
 
         if (answer.length <= 2){
-          answer =prompt("Name is too short. Provide a longer one.")
+          answer = prompt("Name is too short. Provide a longer one.")
+        }
+
+        var test = "<h2>"+answer+"<h2>";
+        $("h1").append(test);
+        $("h1").css("color","red");
+
+        var major = prompt("What so you study?")
+        $("h1").append("<h2>So you study "+major+"</h2>");
+
+        var randomNum = Math.random() * 100;
+        if (major.indexOf("engineer") != -1){
+          alert("No way!. Me too!")
+          randomNum += 10;
+        }
+        else {
+          alert("Eww thats boring.");
+        }
+
+        var hobby = prompt("What do you like to do?");
+        $("h1").append("<h id='hobby'>So you like to "+hobby+"</h2>");
+
+
+        if (randomNum >= 50 ){
+          $( "<p>I think I might like you.</p>" ).appendTo( "#hobby" );
+        }
+        else {
+          $( "<p>Boring. Next person please</p>" ).appendTo( "#hobby" );
         }
       });
     });
   </script>
+  <style>
+    h1{
+      border: 1px solid black;
+    }
+  </style>
 </head>
 <body>
   <h1>Click Me</h1>
