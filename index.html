@@ -9,6 +9,11 @@
       // alert("HI");
       // $("ul").html("this is the only list item");
 
+      // prompt is like an alert but you enter stuff
+      var answer = prompt("How are you feeling?");
+      console.log(answer);
+      $("h1").html("It is great that you are feeling " + answer);
+
       $("ul").click(function(){
         $("ul").html("hi");
       });
@@ -16,6 +21,7 @@
   </script>
 </head>
 <body>
+  <h1></h1>
   <p>This is a very simple HTML document</p>
   <p>It only has two paragraphs</p>
   <ul>
