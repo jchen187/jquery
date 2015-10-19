@@ -10,23 +10,32 @@
       // $("ul").html("this is the only list item");
 
       // prompt is like an alert but you enter stuff
-      var answer = prompt("How are you feeling?");
-      console.log(answer);
-      $("h1").html("It is great that you are feeling " + answer);
+      // var answer = prompt("How are you feeling?");
+      // console.log(answer);
+      // $("h1").html("It is great that you are feeling " + answer);
+      //
+      // $("ul").click(function(){
+      //   $("ul").html("hi");
+      // });
 
-      $("ul").click(function(){
-        $("ul").html("hi");
+      $("h1").click(function(){
+        var answer = prompt("Hi. Name Please");
+
+        if (answer.length <= 2){
+          answer =prompt("Name is too short. Provide a longer one.")
+        }
       });
     });
   </script>
 </head>
 <body>
-  <h1></h1>
+  <h1>Click Me</h1>
+  <!-- <h1></h1>
   <p>This is a very simple HTML document</p>
   <p>It only has two paragraphs</p>
   <ul>
     <li>Item 1</li>
     <li>Item 2</li>
-  </ul>
+  </ul> -->
 </body>
 </html>
