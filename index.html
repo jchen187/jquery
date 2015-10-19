@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Changing Html w/jquery</title>
+  <script src="https://code.jquery.com/jquery-latest.min.js"/>
+  <script>
+    $(document).ready(function(){
+      alert("HI");
+      $("ul").html("this is the only list item");
+
+      $("ul").click(function(){
+        $("ul").html("hi");
+      });
+    });
+  </script>
+</head>
+<body>
+  <p>This is a very simple HTML document</p>
+  <p>It only has two paragraphs</p>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+</body>
+</html>
