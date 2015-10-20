@@ -6,6 +6,9 @@
 
   <script>
     $(document).ready(function(){
+      //alert does nothing now
+      alert = function(){};
+      alert("test");
       // alert("HI");
       // $("ul").html("this is the only list item");
 
@@ -29,8 +32,12 @@
               answer = prompt("Name is too short. Provide a longer one.")
             }
 
+            var test = "Hi "+answer+" Nice to meet you";
+            $("h1").html("Welcome! "+test);
+            /*
             var test = "<h2>Hi "+answer+". Nice to meet you<h2>";
             $("h1").append(test);
+            */
             // Somehow you cant don nth child
             // $("h1:nth-child(2)").css("color","red");
             $("#top").css("color","red");
