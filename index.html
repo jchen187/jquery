@@ -42,6 +42,18 @@
             // $("h1:nth-child(2)").css("color","red");
             $("#top").css("color","red");
 
+            var age = prompt("This site is only for 18+. Please enter your age.");
+            if (age >= 18){
+              //good for you
+            }
+            else if (age >= 16){
+              diff = 18 - age;
+              alert("just wait " + diff + " years");
+            }
+            else {
+              alert("sorry")
+            }
+
             var major = prompt("What so you study?")
             $("h1").append("<h2>So you study "+major+"</h2>");
 
