@@ -25,9 +25,9 @@
           answer = prompt("Name is too short. Provide a longer one.")
         }
 
-        var test = "<h2>"+answer+"<h2>";
+        var test = "<h2>Hi "+answer+". Nice to meet you<h2>";
         $("h1").append(test);
-        $("h1").css("color","red");
+        $("h1:nth-child(2)").css("color","red");
 
         var major = prompt("What so you study?")
         $("h1").append("<h2>So you study "+major+"</h2>");
@@ -42,26 +42,27 @@
         }
 
         var hobby = prompt("What do you like to do?");
-        $("h1").append("<h id='hobby'>So you like to "+hobby+"</h2>");
+        $("h2").append("<h id='hobby'>So you like to "+hobby+"</h2>");
 
 
         if (randomNum >= 50 ){
-          $( "<p>I think I might like you.</p>" ).appendTo( "#hobby" );
+          $( "<p>I think I might like you.</p>" ).appendTo( "p" );
         }
         else {
-          $( "<p>Boring. Next person please</p>" ).appendTo( "#hobby" );
+          $( "<p>Boring. Next person please</p>" ).appendTo( "p" );
         }
       });
     });
   </script>
   <style>
-    h1{
+    h1, p{
       border: 1px solid black;
     }
   </style>
 </head>
 <body>
-  <h1>Click Me</h1>
+  <p>asd</p>
+  <h1 id="top">Click Me</h1>
   <!-- <h1></h1>
   <p>This is a very simple HTML document</p>
   <p>It only has two paragraphs</p>
