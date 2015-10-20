@@ -17,41 +17,44 @@
       // $("ul").click(function(){
       //   $("ul").html("hi");
       // });
+      var clicked = false;
+      if (clicked != true){
+        clicked = true;
+        $("h1").click(function(){
+          var answer = prompt("Hi. Name Please");
 
-      $("h1").click(function(){
-        var answer = prompt("Hi. Name Please");
+          if (answer.length <= 2){
+            answer = prompt("Name is too short. Provide a longer one.")
+          }
 
-        if (answer.length <= 2){
-          answer = prompt("Name is too short. Provide a longer one.")
-        }
+          var test = "<h2>Hi "+answer+". Nice to meet you<h2>";
+          $("h1").append(test);
+          $("h1:nth-child(2)").css("color","red");
 
-        var test = "<h2>Hi "+answer+". Nice to meet you<h2>";
-        $("h1").append(test);
-        $("h1:nth-child(2)").css("color","red");
+          var major = prompt("What so you study?")
+          $("h1").append("<h2>So you study "+major+"</h2>");
 
-        var major = prompt("What so you study?")
-        $("h1").append("<h2>So you study "+major+"</h2>");
+          var randomNum = Math.random() * 100;
+          if (major.indexOf("engineer") != -1){
+            alert("No way!. Me too!")
+            randomNum += 10;
+          }
+          else {
+            alert("Eww thats boring.");
+          }
 
-        var randomNum = Math.random() * 100;
-        if (major.indexOf("engineer") != -1){
-          alert("No way!. Me too!")
-          randomNum += 10;
-        }
-        else {
-          alert("Eww thats boring.");
-        }
-
-        var hobby = prompt("What do you like to do?");
-        $("h2").append("<h id='hobby'>So you like to "+hobby+"</h2>");
+          var hobby = prompt("What do you like to do?");
+          $("h2:last-child").append("<h2 id='hobby'>So you like to "+hobby+"</h2>");
 
 
-        if (randomNum >= 50 ){
-          $( "<p>I think I might like you.</p>" ).appendTo( "#dance" );
-        }
-        else {
-          $( "<p>Boring. Next person please</p>" ).appendTo( "dance" );
-        }
-      });
+          if (randomNum >= 50 ){
+            $( "<p>I think I might like you.</p>" ).appendTo( "#dance" );
+          }
+          else {
+            $( "<p>Boring. Next person please</p>" ).appendTo( "dance" );
+          }
+        });
+      }
     });
   </script>
   <style>
